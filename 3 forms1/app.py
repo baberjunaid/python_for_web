@@ -10,7 +10,8 @@ def index():
 def intro():
     fname = request.form.get("fname")
     lname = request.form.get("lname")
-    return "Hello " + str(fname) + " " +  str(lname)
+    program = request.form.get("program")
+    return "Hello " + str(fname) + " " +  str(lname) +" from " + program
 
 
 
