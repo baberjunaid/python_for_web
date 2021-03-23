@@ -1,0 +1,31 @@
+{% extends "master_template.html" %}
+{%block title%}
+  This is Intro
+{%endblock%}
+
+{% block body%}
+  <h2>Welcome</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Program Study</th>
+        <th>Languages</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+        <td>{{program}}</td>
+        <td>
+          {%for a in fav%}
+          {{a}},
+          {%endfor%}
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  {%endblock%}
