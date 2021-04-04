@@ -10,7 +10,7 @@ PRIMARY KEY (id)
 );
 
 insert into students(full_name, email, batch_title) values ('M Raza Khan', 'raza@gmail.com', 'BSCS');
-insert into students(full_name, email, batch_title) values ('Azhar Khan', 'azhar@gmail.com', 'BSCS');
+insert into students(full_name, email, batch_title) values ('Azhar Khan', 'azhar@gmail.com', 'BSIT');
 insert into students(full_name, email, batch_title) values ('Wateen Khan', 'wateen@gmail.com', 'BSCS');
 insert into students(full_name, email, batch_title) values ('Zaheer Khan', 'zaheer@gmail.com', 'BSCS');
 
