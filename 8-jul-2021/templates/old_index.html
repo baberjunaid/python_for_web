@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> {{title}} </title>
+    <style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
+  </head>
+
+
+<body>
+
+<h1>Hello Students</h1>
+ <br>
+
+
+<table>
+  {%for a in range(r)%}
+
+  <tr>
+    <td> {{loop.index}} </td>
+    <td> {{title}} </td>
+  </tr>
+  {%endfor%}
+
+</table>
+
+<hr>
+
+<table>
+  {%for a in my_names%}
+
+  <tr>
+    <td> {{loop.index}} </td>
+    <td> {{a}} </td>
+  </tr>
+  {%endfor%}
+
+</table>
+</body>
+</html>
