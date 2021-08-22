@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+<h4> <a href="/logout">Logout</a> </h4>
+<hr>
+<form action="/intro" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Junaid"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Baber"><br><br>
+  <label for="program">Select Program </label> <br>
+  <select name="program">
+    <option value="CS"> BS (CS) </option>
+    <option value="IT"> BS (IT) </option>
+  </select> </br> </br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/intro".</p>
+
+</body>
+</html>
