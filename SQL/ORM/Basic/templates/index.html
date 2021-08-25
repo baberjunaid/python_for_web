@@ -1,0 +1,28 @@
+{% extends "master_template.html" %}
+    {%block title%}
+    This is the Main Index Page
+    {%endblock%}
+  {%block body%}
+  <h1 class="label label-success">Horizontal form</h1>
+  Welcome to BS Class <br>
+  <table class="table table-hover">
+    <tr>
+      <td> Batch Title</td>
+      <td> Total Students </td>
+    </tr>
+    {% for stud in total_students %}
+    <tr>
+      <td class="btn btn-success">
+        <a href="view_students/{{stud.batch_title}}"> {{stud.batch_title}}</a>
+      </td>
+      <td > {{stud.total_record}}</td>
+    </tr>
+    {%endfor%}
+    <tr>
+      <td> Total Student: </td>
+      <td > {{total}} </td>
+      </tr>
+  </table>
+
+
+{%endblock%}

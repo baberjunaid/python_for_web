@@ -1,0 +1,29 @@
+{% extends "master_template.html" %}
+{%block title%}
+  This is Intro
+{%endblock%}
+
+{% block body%}
+  <h2>Welcome, <a href="/"> All </a></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Program Study</th>
+        <th> Action </th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {%for stud in students%}
+      <tr>
+        <td>{{stud.full_name}}</td>
+        <td>{{stud.email}}</td>
+        <td><a href="/batch/{{stud.batch_title}}"> {{stud.batch_title}} </a></td>
+        <td><a href="/update/{{stud.id}}">update</a>, <a href="/delete/{{stud.id}}">delete</a></td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  {%endblock%}
