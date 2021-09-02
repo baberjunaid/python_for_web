@@ -1,0 +1,30 @@
+{% extends "master_template.html" %}
+{%block title%}
+  This is Intro
+{%endblock%}
+
+{% block body%}
+
+  <h2>Welcome, <a href="/"> All </a></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th> Student Name </th>
+        <th> Student Batch </th>
+        <th>Topic of Interest</th>
+        <th> Date Created </th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {%for s in stud%}
+      <tr>
+        <td>{{s.Students.full_name}}</td>
+        <td>{{s.Students.batch_title}}</td>
+        <td>{{s.Student_Expertise.topic}}</td>
+        <td>{{s.Student_Expertise.date_created}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  {%endblock%}
