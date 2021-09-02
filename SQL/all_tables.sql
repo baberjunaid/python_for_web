@@ -9,6 +9,14 @@ CREATE TABLE students (
 PRIMARY KEY (id)
 );
 
+
+CREATE TABLE student_expertise (
+    id int NOT NULL AUTO_INCREMENT,
+    student_id int,
+    topic VARCHAR(100),
+    date_created  DATETIME DEFAULT   CURRENT_TIMESTAMP,
+PRIMARY KEY (id)
+);
 insert into students(full_name, email, batch_title) values ('M Raza Khan', 'raza@gmail.com', 'BSCS');
 insert into students(full_name, email, batch_title) values ('Azhar Khan', 'azhar@gmail.com', 'BSIT');
 insert into students(full_name, email, batch_title) values ('Wateen Khan', 'wateen@gmail.com', 'BSCS');
