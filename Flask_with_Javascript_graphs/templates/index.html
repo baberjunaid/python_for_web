@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	exportEnabled: true,
+	title:{
+		text: "Semester 1 Result of BSIT-2017"
+	},
+	axisY:{
+		title: "Number of Medals"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend:{
+		cursor:"pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [
+{%for s in stud.keys()%}
+{
+		type: "spline",
+		name: "{{s}}",
+		showInLegend: true,
+		dataPoints: [
+			{%for j in stud[s].keys()%}
+			{ label: "{{j}}" , y: {{stud[s][j]}} },
+			{%endfor%}
+
+		]
+
+	},
+	{%endfor%}
+],
+});
+
+chart.render();
+
+function toggleDataSeries(e) {
+	if(typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else {
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
